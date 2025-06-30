@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const port = process.env.PORT || 9001;
+const port = process.env.PORT || 9002;
 const serverDomain = process.env.SERVER_DOMAIN || "localhost";
 const httpProtocol = process.env.HTTP_PROTOCOL || 'http';
 
