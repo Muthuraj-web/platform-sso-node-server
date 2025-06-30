@@ -231,10 +231,10 @@ app.get("/redirectedDEPJSON", (req, res) => {
   					"message": "The MDM server requires you to authenticate with your Identity Provider. Please follow the instructions provided by your organization to complete the authentication process - BY MEMDM",
   					"details": {
     					"Package": {
-      						"ManifestURL": "${httpProtocol}://${serverDomain}:${port}/manifest"
+      						"ManifestURL": `${httpProtocol}://${serverDomain}:${port}/manifest`
     					},
-    				"ProfileURL": "${httpProtocol}://${serverDomain}:${port}/profile",
-    				"AuthURL": "${httpProtocol}://${serverDomain}:${port}/auth"
+    				"ProfileURL": `${httpProtocol}://${serverDomain}:${port}/profile`,
+    				"AuthURL": `${httpProtocol}://${serverDomain}:${port}/auth`
   					}}
 	const inputStream = Buffer.from(JSON.stringify(pssoJSON));
 	
@@ -258,14 +258,14 @@ app.get("/redirectedDEPXML", (req, res) => {
 						<key>details</key>
 						<dict>
 							<key>ProfileURL</key>
-							<string>"${httpProtocol}://${serverDomain}:${port}/profile"</string>
+							<string>${httpProtocol}://${serverDomain}:${port}/profile</string>
 							<key>Package</key>
 							<dict>
 								<key>ManifestURL</key>
-								<string>"${httpProtocol}://${serverDomain}:${port}/manifest"</string>
+								<string>${httpProtocol}://${serverDomain}:${port}/manifest</string>
 							</dict>
 							<key>AuthURL</key>
-							<string>"${httpProtocol}://${serverDomain}:${port}/auth"</string>
+							<string>${httpProtocol}://${serverDomain}:${port}/auth</string>
 						</dict>
 					</dict>
 					</plist>`
