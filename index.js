@@ -177,7 +177,6 @@ const landingpage = `<!DOCTYPE html>
   </div>
   <script>
     document.getElementById("loginForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // prevent actual form submit
       window.location.href = "apple-remotemanagement-user-login://authentication-results?access-token=dXNlci1pZGVudGl0eQ";
     });
   </script>
