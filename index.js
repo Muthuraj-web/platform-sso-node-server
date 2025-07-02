@@ -177,7 +177,8 @@ const landingpage = `<!DOCTYPE html>
   </div>
   <script>
     document.getElementById("loginForm").addEventListener("submit", function(e) {
-      window.location.href = "apple-remotemanagement-user-login://authentication-results?access-token=dXNlci1pZGVudGl0eQ";
+      e.preventDefault()
+      window.location.href = "/authResponse";
     });
   </script>
 </body>
@@ -222,6 +223,13 @@ app.get("/auth", (req, res) => {
 		console.error('Error reading file:', err);
 	}
 })
+
+app.get('/authResponse', (req, res) => {
+  	const responseHeaders = {
+    		"Location": "apple-remotemanagement-user-login://authentication-results?access-token=dXNlci1pZGVudGl0eQ",
+  	};
+  	res.set(responseHeaders).status(308).end();
+});
 
 app.get("/redirectedDEPJSON", (req, res) => {
 	const pssoJSON={
