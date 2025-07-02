@@ -16,10 +16,8 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<string>Password</string>
 			<key>ExtensionData</key>
 			<dict>
-				<key>AppPrefixAllowList</key>
+				<key>AppAllowList</key>
 				<string>com.apple.,com.microsoft.</string>
-				<key>Enable_SSO_On_All_ManagedApps</key>
-				<integer>1</integer>
 				<key>browser_sso_disable_mfa</key>
 				<integer>1</integer>
 				<key>browser_sso_interaction_enabled</key>
@@ -28,13 +26,13 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<key>ExtensionIdentifier</key>
 			<string>com.microsoft.CompanyPortalMac.ssoextension</string>
 			<key>PayloadDisplayName</key>
-			<string>Platform SSO - Entra - Password Flow</string>
+			<string>Extensible Single Sign-On</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.extensiblesso.F48A4B7A-ABAE-409E-8066-B79D58A6C140</string>
+			<string>com.apple.extensiblesso.26FA5437-C5A8-44DB-8A2C-438365D689DF</string>
 			<key>PayloadType</key>
 			<string>com.apple.extensiblesso</string>
 			<key>PayloadUUID</key>
-			<string>F48A4B7A-ABAE-409E-8066-B79D58A6C140</string>
+			<string>26FA5437-C5A8-44DB-8A2C-438365D689DF</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>PlatformSSO</key>
@@ -54,33 +52,44 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<string>Redirect</string>
 			<key>URLs</key>
 			<array>
+				<string>https://login.microsoftonline.com</string>
 				<string>https://login.microsoft.com</string>
 				<string>https://sts.windows.net</string>
 				<string>https://login.partner.microsoftonline.cn</string>
 				<string>https://login.chinacloudapi.cn</string>
 				<string>https://login.microsoftonline.us</string>
 				<string>https://login-us.microsoftonline.com</string>
-				<string>https://login.microsoftonline.com</string>
 			</array>
+		</dict>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Login Window</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.loginwindow.87D0BCBD-DD8E-4AE3-A0B7-0481E71592D5</string>
+			<key>PayloadType</key>
+			<string>com.apple.loginwindow</string>
+			<key>PayloadUUID</key>
+			<string>87D0BCBD-DD8E-4AE3-A0B7-0481E71592D5</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>SHOWOTHERUSERS_MANAGED</key>
+			<true/>
 		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
-	<string>Platform SSO - Entra - Password Flow</string>
+	<string>Platform SSO - Password Sync</string>
 	<key>PayloadIdentifier</key>
-	<string>3213D4B8-7376-4144-94EE-2CABB078856D</string>
+	<string>mdm.manageengine.com</string>
 	<key>PayloadScope</key>
 	<string>System</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>3213D4B8-7376-4144-94EE-2CABB078856D</string>
+	<string>BFFE3ECD-24B4-478B-B5D1-B1CA16853848</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
-	<key>TargetDeviceType</key>
-	<integer>5</integer>
 </dict>
-</plist>
-`;
+</plist>`;
 
 const platformssosecureenclaveprofile = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -319,7 +328,7 @@ app.get("/redirectedDEPJSON", (req, res) => {
     					"Package": {
       						"ManifestURL": `${httpProtocol}://${serverDomain}:${port}/manifest`
     					},
-    				"ProfileURL": `${httpProtocol}://${serverDomain}:${port}/profile?psso_profile_type=2`,
+    				"ProfileURL": `${httpProtocol}://${serverDomain}:${port}/profile?psso_profile_type=1`,
     				"AuthURL": `${httpProtocol}://${serverDomain}:${port}/auth`
   					}}
 	const inputStream = Buffer.from(JSON.stringify(pssoJSON));
