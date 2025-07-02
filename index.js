@@ -61,20 +61,6 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 				<string>https://login-us.microsoftonline.com</string>
 			</array>
 		</dict>
-		<dict>
-			<key>PayloadDisplayName</key>
-			<string>Login Window</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.loginwindow.87D0BCBD-DD8E-4AE3-A0B7-0481E71592D5</string>
-			<key>PayloadType</key>
-			<string>com.apple.loginwindow</string>
-			<key>PayloadUUID</key>
-			<string>87D0BCBD-DD8E-4AE3-A0B7-0481E71592D5</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>SHOWOTHERUSERS_MANAGED</key>
-			<true/>
-		</dict>
 	</array>
 	<key>PayloadDisplayName</key>
 	<string>Platform SSO - Password Sync</string>
@@ -353,7 +339,7 @@ app.get("/redirectedDEPXML", (req, res) => {
 						<key>details</key>
 						<dict>
 							<key>ProfileURL</key>
-							<string>${httpProtocol}://${serverDomain}:${port}/profile</string>
+							<string>${httpProtocol}://${serverDomain}:${port}/profile?psso_profile_type=1</string>
 							<key>Package</key>
 							<dict>
 								<key>ManifestURL</key>
