@@ -118,6 +118,8 @@ const platformssosecureenclaveprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<dict>
 				<key>AuthenticationMethod</key>
 				<string>UserSecureEnclaveKey</string>
+				<key>UseSharedDeviceKeys</key>
+				<true/>
 			</dict>
 			<key>RegistrationToken</key>
 			<string>{{DEVICEREGISTRATION}}</string>
