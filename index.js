@@ -5,7 +5,7 @@ const port = process.env.PORT || 9002;
 const serverDomain = process.env.SERVER_DOMAIN || "localhost";
 const httpProtocol = process.env.HTTP_PROTOCOL || 'http';
 
-const profilevalue = `<?xml version="1.0" encoding="UTF-8"?>
+const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -81,6 +81,78 @@ const profilevalue = `<?xml version="1.0" encoding="UTF-8"?>
 </dict>
 </plist>
 `;
+
+const platformssosecureenclaveprofile = `<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>AuthenticationMethod</key>
+			<string>UserSecureEnclaveKey</string>
+			<key>ExtensionData</key>
+			<dict>
+				<key>AppPrefixAllowList</key>
+				<string>com.apple.,com.microsoft.</string>
+				<key>Enable_SSO_On_All_ManagedApps</key>
+				<integer>1</integer>
+				<key>browser_sso_disable_mfa</key>
+				<integer>1</integer>
+				<key>browser_sso_interaction_enabled</key>
+				<integer>1</integer>
+			</dict>
+			<key>ExtensionIdentifier</key>
+			<string>com.microsoft.CompanyPortalMac.ssoextension</string>
+			<key>PayloadDisplayName</key>
+			<string>Platform SSO - Entra -  Secure Enclave Flow</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.extensiblesso.F48A4B7A-ABAE-409E-8066-B79D58A6C140</string>
+			<key>PayloadType</key>
+			<string>com.apple.extensiblesso</string>
+			<key>PayloadUUID</key>
+			<string>F48A4B7A-ABAE-409E-8066-B79D58A6C140</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>PlatformSSO</key>
+			<dict>
+				<key>AuthenticationMethod</key>
+				<string>UserSecureEnclaveKey</string>
+			</dict>
+			<key>RegistrationToken</key>
+			<string>{{DEVICEREGISTRATION}}</string>
+			<key>TeamIdentifier</key>
+			<string>UBF8T346G9</string>
+			<key>Type</key>
+			<string>Redirect</string>
+			<key>URLs</key>
+			<array>
+				<string>https://login.microsoft.com</string>
+				<string>https://sts.windows.net</string>
+				<string>https://login.partner.microsoftonline.cn</string>
+				<string>https://login.chinacloudapi.cn</string>
+				<string>https://login.microsoftonline.us</string>
+				<string>https://login-us.microsoftonline.com</string>
+				<string>https://login.microsoftonline.com</string>
+			</array>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Platform SSO - Entra -  Secure Enclave Flow</string>
+	<key>PayloadIdentifier</key>
+	<string>3213D4B8-7376-4144-94EE-2CABB078856D</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>3213D4B8-7376-4144-94EE-2CABB078856D</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+	<key>TargetDeviceType</key>
+	<integer>5</integer>
+</dict>
+</plist>`
 
 
 const companyportalmanifest = `<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -188,8 +260,13 @@ const landingpage = `<!DOCTYPE html>
 app.use(express.json());
 
 app.get("/profile", (req, res) => {
-    console.log("Got GET Request for /profile");
-	const inputStream = Buffer.from(profilevalue);
+
+	const pssoProfileType = req.query.psso_profile_type;
+	console.log("Got GET Request for /profile for type: " + pssoProfileType);
+
+	const inputStream = pssoProfileType == "1"
+		? Buffer.from(platformssopasscodeprofile)
+		: Buffer.from(platformssosecureenclaveprofile);
 
 	const responseHeaders = {
 		"Content-Type": "application/xml",
@@ -240,7 +317,7 @@ app.get("/redirectedDEPJSON", (req, res) => {
     					"Package": {
       						"ManifestURL": `${httpProtocol}://${serverDomain}:${port}/manifest`
     					},
-    				"ProfileURL": `${httpProtocol}://${serverDomain}:${port}/profile`,
+    				"ProfileURL": `${httpProtocol}://${serverDomain}:${port}/profile?psso_profile_type=2`,
     				"AuthURL": `${httpProtocol}://${serverDomain}:${port}/auth`
   					}}
 	const inputStream = Buffer.from(JSON.stringify(pssoJSON));
