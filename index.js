@@ -41,8 +41,25 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 				<string>Password</string>
 				<key>EnableCreateUserAtLogin</key>
 				<true/>
+				<key>EnableCreateFirstUserDuringSetup</key>
+				<true/>
 				<key>UseSharedDeviceKeys</key>
 				<true/>
+				<key>UserAuthorizationMode</key>
+				<string>Admin</string>
+				<key>NewUserAuthorizationMode</key>
+				<string>Admin</string>
+				<key>TokenToUserMapping</key>
+				<dict>
+					<key>AccountName</key>
+					<string>preferred_username</string>
+					<key>FullName</key>
+					<string>preferred_username</string>
+				</dict>
+				<key>NewUserAuthenticationMethods</key>
+				<array>
+					<string>Password</string>
+				</array>
 			</dict>
 			<key>RegistrationToken</key>
 			<string>{{DEVICEREGISTRATION}}</string>
