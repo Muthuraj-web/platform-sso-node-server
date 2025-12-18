@@ -12,22 +12,6 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 	<key>PayloadContent</key>
 	<array>
 		<dict>
-			<key>PayloadCertificateFileName</key>
-			<string>ISRG Root X1</string>
-			<key>PayloadContent</key>
-			<data>LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tDQpNSUlGYXpDQ0ExT2dBd0lCQWdJUkFJSVF6N0RTUU9OWlJHUGd1Mk9DaXdBd0RRWUpLb1pJaHZjTkFRRUxCUUF3DQpUekVMTUFrR0ExVUVCaE1DVlZNeEtUQW5CZ05WQkFvVElFbHVkR1Z5Ym1WMElGTmxZM1Z5YVhSNUlGSmxjMlZoDQpjbU5vSUVkeWIzVndNUlV3RXdZRFZRUURFd3hKVTFKSElGSnZiM1FnV0RFd0hoY05NVFV3TmpBME1URXdORE00DQpXaGNOTXpVd05qQTBNVEV3TkRNNFdqQlBNUXN3Q1FZRFZRUUdFd0pWVXpFcE1DY0dBMVVFQ2hNZ1NXNTBaWEp1DQpaWFFnVTJWamRYSnBkSGtnVW1WelpXRnlZMmdnUjNKdmRYQXhGVEFUQmdOVkJBTVRERWxUVWtjZ1VtOXZkQ0JZDQpNVENDQWlJd0RRWUpLb1pJaHZjTkFRRUJCUUFEZ2dJUEFEQ0NBZ29DZ2dJQkFLM29KSFAwRkRmem01NHJWeWdjDQpoNzdjdDk4NGtJeHVQT1pYb0hqM2RjS2kvdlZxYnZZQVR5amIzbWlHYkVTVHRyRmovUlFTYTc4ZjB1b3hteUYrDQowVE04dWtqMTNYbmZzN2ovRXZFaG1rdkJpb1p4YVVwbVpteVBmanh3djYwcElnYno1TURtZ0s3aVM0KzNtWDZVDQpBNS9UUjVkOG1VZ2pVK2c0cms4S2I0TXUwVWxYaklCMHR0b3YwRGlOZXdOd0lSdDE4akE4K28rdTNkcGpxK3NXDQpUOEtPRVV0K3p3dm8vN1YzTHZTeWUwcmdUQklsREhDTkF5bWc0Vk1rN0JQWjdobS9FTE5LakQrSm8yRlIzcXlIDQpCNVQwWTNIc0x1SnZXNWlCNFlsY05IbHNkdTg3a0dKNTV0dWttaThteGRBUTRRN2UyUkNPRnZ1Mzk2ajN4K1VDDQpCNWlQTmdpVjUrSTNsZzAyZFo3N0RuS3hIWnU4QS9sSkJkaUIzUVcwS3RaQjZhd0JkcFVLRDlqZjFiMFNIelV2DQpLQmRzMHBqQnFBbGtkMjVITjdyT3JGbGVhSjEvY3RhSnhRWkJLVDVaUHQwbTlTVEpFYWRhbzB4QUgwYWhtYlduDQpPbEZ1aGp1ZWZYS25FZ1Y0V2UwK1VYZ1ZDd09QamRBdkJiSStlMG9jUzNNRkV2ekc2dUJRRTN4RGszU3p5blRuDQpqaDhCQ05BdzFGdHhOclFIdXNFd01GeEl0NEk3bUtaOVlJcWlveW1DekxxOWd3UWJvb01EUWFIV0JmRWJ3cmJ3DQpxSHlHTzBhb1NDcUkzSGFhZHI4ZmFxVTlHWS9yT1BOazNzZ3JEUW9vLy9mYjRoVkMxQ0xRSjEzaGVmNFk1M0NJDQpyVTdtMllzNnh0MG5VVzcvdkdUMU0wTlBBZ01CQUFHalFqQkFNQTRHQTFVZER3RUIvd1FFQXdJQkJqQVBCZ05WDQpIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSNXRGbm1lN2JsNUFGemdBaUl5QnBZOXVtYmJqQU5CZ2txDQpoa2lHOXcwQkFRc0ZBQU9DQWdFQVZSOVlxYnl5cUZEUURMSFlHbWtnSnlrSXJHRjFYSXB1K0lMbGFTL1Y5bFpMDQp1Ymh6RUZuVElaZCs1MHh4KzdMU1lLMDVxQXZxRnlGV2hmRlFEbG5yenVCWjZickpGZStHblkrRWdQYms2WkdRDQozQmViWWh0RjhHYVYwbnh2d3VvNzd4L1B5OWF1Si9HcHNNaXUvWDErbXZvaUJPdi8yWC9xa1NzaXNSY09qL0tLDQpORnRZMlB3QnlWUzV1Q2JNaW9nemlVd3RoRHlDMys2V1Z3VzZMTHYzeExmSFRqdUN2akhJSW5Oemt0SENnS1E1DQpPUkF6STRKTVBKK0dzbFdZSGI0cGhvd2ltNTdpYXp0WE9vSndUZHdKeDRuTENnZE5iT2hkanNudnpxdkh1N1VyDQpUa1hXU3RBbXpPVnl5Z2hxcFpYakZhSDNwTzNKTEYrbCsvK3NLQUl1dnRkN3UrTnhlNUFXMHdkZVJsTjhOd2RDDQpqTlBFbHB6Vm1iVXE0SlVhZ0VpdVREa0h6c3hIcEZLVks3cTQrNjNTTTFOOTVSMU5iZFdoc2NkQ2IrWkFKelZjDQpveWkzQjQzbmpUT1E1eU9mKzFDY2VXeEcxYlFWczVadWZwc01sanE0VWkwLzFsdmgrd2pDaFA0a3FLT0oycXhxDQo0Umdxc2FoRFlWdlRIOXc3alhieUxlaU5kZDhYTTJ3OVUvdDd5MEZmLzl5aTBHRTQ0WmE0ckYyTE45ZDExVFBBDQptUkd1blVIQmNuV0V2Z0pCUWw5bkpFaVUwWnNudmdjL3ViaFBnWFJSNFhxMzdaMGo0cjdnMVNnRUV6d3hBNTdkDQplbXlQeGdjWXhuL2VSNDQvS0o0RUJzK2xWRFIzdmV5Sm0ra1hROTliMjEvK2poNVhvczFBblg1aUl0cmVHQ2M9DQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tDQo=</data>
-			<key>PayloadDisplayName</key>
-			<string>Certificate (Root)</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.security.root.14A21C93-6A9D-40E1-A265-4A3E78ECBF1A</string>
-			<key>PayloadType</key>
-			<string>com.apple.security.root</string>
-			<key>PayloadUUID</key>
-			<string>14A21C93-6A9D-40E1-A265-4A3E78ECBF1A</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>PayloadContent</key>
 			<dict>
 				<key>AllowAllAppsAccess</key>
@@ -139,21 +123,10 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 				<string>Password</string>
 				<key>EnableAuthorization</key>
 				<true/>
-				<key>EnableCreateFirstUserDuringSetup</key>
-				<true/>
-				<key>EnableCreateUserAtLogin</key>
-				<true/>
 				<key>EnableRegistrationDuringSetup</key>
 				<true/>
 				<key>NewUserAuthorizationMode</key>
 				<string>Admin</string>
-				<key>TokenToUserMapping</key>
-				<dict>
-					<key>AccountName</key>
-					<string>macOSAccountUsername</string>
-					<key>FullName</key>
-					<string>macOSAccountFullName</string>
-				</dict>
 				<key>UseSharedDeviceKeys</key>
 				<true/>
 				<key>UserAuthorizationMode</key>
@@ -168,6 +141,8 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 				<string>https://trial-5957156.okta.com/device-access/api/v1/nonce</string>
 				<string>https://trial-5957156.okta.com/oauth2/v1/token</string>
 			</array>
+			<key>RegistrationToken</key>
+			<string>any</string>
 		</dict>
 		<dict>
 			<key>PayloadContent</key>
@@ -183,6 +158,8 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 								<string>HideMainWindow</string>
 								<key>OktaVerify.OrgUrl</key>
 								<string>trial-5957156.okta.com</string>
+								<key>OktaVerify.EnrollmentOptions</key>
+            					<string>SilentEnrollmentEnabled</string>
 							</dict>
 						</dict>
 					</array>
@@ -217,6 +194,8 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 								<string>0oaygjzu4zLrvwnIR697</string>
 								<key>PlatformSSO.ProtocolVersion</key>
 								<string>2.0</string>
+								<key>OktaVerify.EnrollmentOptions</key>
+            					<string>SilentEnrollmentEnabled</string>
 							</dict>
 						</dict>
 					</array>
