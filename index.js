@@ -366,7 +366,7 @@ const companyportalmanifest = `<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//
         <key>metadata</key>
         <dict>
             <key>bundle-identifier</key>
-            <string>com.okta.mobile.</string>
+            <string>com.okta.mobile</string>
             <key>kind</key>
             <string>software</string>
             <key>title</key>
