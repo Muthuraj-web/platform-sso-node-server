@@ -12,83 +12,262 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 	<key>PayloadContent</key>
 	<array>
 		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>AllowAllAppsAccess</key>
+				<true/>
+				<key>CertificateRenewalTimeInterval</key>
+				<integer>14</integer>
+				<key>Challenge</key>
+				<string>ONGL5lsm3DixYi0Bu9V_Z396dCgzAa_Cu7TDrUx3CWw</string>
+				<key>Key Type</key>
+				<string>RSA</string>
+				<key>Key Usage</key>
+				<integer>1</integer>
+				<key>KeyIsExtractable</key>
+				<false/>
+				<key>Keysize</key>
+				<integer>2048</integer>
+				<key>Name</key>
+				<string>SCEP Server Name</string>
+				<key>Subject</key>
+				<array>
+					<array>
+						<array>
+							<string>CN</string>
+							<string>%devicename% managementAttestation %udid%</string>
+						</array>
+					</array>
+				</array>
+				<key>URL</key>
+				<string>https://trial-5957156.okta.com/pki/7D821A2E96C64F65BAB23F2C098629BA00D1B2E8/scep/rac23q9ipfbw5WThW698</string>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>def</string>
+			<key>PayloadDisplayName</key>
+			<string>SCEP (CA-OKTAPreview)</string>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>FB7C3BE5-4B3B-4C92-B5D8-D8081237AADE</string>
+			<key>PayloadOrganization</key>
+			<string>State of California - Office of Digital Innovation</string>
+			<key>PayloadType</key>
+			<string>com.apple.security.scep</string>
+			<key>PayloadUUID</key>
+			<string>1234556</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>Configuration</key>
+			<array>
+				<dict>
+					<key>ApplicationIdentifier</key>
+					<string>B7F62B65BN.com.okta.mobile</string>
+					<key>AssociatedDomains</key>
+					<array>
+						<string>authsrv:trial-5957156.okta.com</string>
+					</array>
+				</dict>
+				<dict>
+					<key>ApplicationIdentifier</key>
+					<string>B7F62B65BN.com.okta.mobile.auth-service-extension</string>
+					<key>AssociatedDomains</key>
+					<array>
+						<string>authsrv:trial-5957156.okta.com</string>
+					</array>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Only for 10.15 MacOS</string>
+			<key>PayloadDisplayName</key>
+			<string>ASSOCIATED_DOMAINS</string>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>47A19A21-3CEC-401B-A7A2-6D82331E23DB</string>
+			<key>PayloadOrganization</key>
+			<string>State of California - Office of Digital Innovation</string>
+			<key>PayloadType</key>
+			<string>com.apple.associated-domains</string>
+			<key>PayloadUUID</key>
+			<string>47A19A21-3CEC-401B-A7A2-6D82331E23DB</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
 			<key>AuthenticationMethod</key>
 			<string>Password</string>
-			<key>ExtensionData</key>
-			<dict>
-				<key>AppAllowList</key>
-				<string>com.apple.,com.microsoft.</string>
-				<key>browser_sso_disable_mfa</key>
-				<integer>1</integer>
-				<key>browser_sso_interaction_enabled</key>
-				<integer>1</integer>
-			</dict>
 			<key>ExtensionIdentifier</key>
-			<string>com.microsoft.CompanyPortalMac.ssoextension</string>
+			<string>com.okta.mobile.auth-service-extension</string>
 			<key>PayloadDisplayName</key>
-			<string>Extensible Single Sign-On</string>
+			<string>Single Sign-On Extensions Payload</string>
 			<key>PayloadIdentifier</key>
-			<string>com.apple.extensiblesso.26FA5437-C5A8-44DB-8A2C-438365D689DF</string>
+			<string>B05C79FC-6F87-498F-B17C-3E35107C3CED</string>
+			<key>PayloadOrganization</key>
+			<string>JAMF Software</string>
 			<key>PayloadType</key>
 			<string>com.apple.extensiblesso</string>
 			<key>PayloadUUID</key>
-			<string>26FA5437-C5A8-44DB-8A2C-438365D689DF</string>
+			<string>B05C79FC-6F87-498F-B17C-3E35107C3CED</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 			<key>PlatformSSO</key>
 			<dict>
+				<key>AccountDisplayName</key>
+				<string>Okta Preview</string>
+				<key>AllowDeviceIdentifiersInAttestation</key>
+				<true/>
 				<key>AuthenticationMethod</key>
 				<string>Password</string>
-				<key>EnableCreateUserAtLogin</key>
+				<key>EnableAuthorization</key>
 				<true/>
 				<key>EnableCreateFirstUserDuringSetup</key>
 				<true/>
-				<key>UseSharedDeviceKeys</key>
+				<key>EnableCreateUserAtLogin</key>
 				<true/>
-				<key>UserAuthorizationMode</key>
-				<string>Admin</string>
+				<key>EnableRegistrationDuringSetup</key>
+				<true/>
 				<key>NewUserAuthorizationMode</key>
 				<string>Admin</string>
 				<key>TokenToUserMapping</key>
 				<dict>
 					<key>AccountName</key>
-					<string>preferred_username</string>
+					<string>macOSAccountUsername</string>
 					<key>FullName</key>
-					<string>preferred_username</string>
+					<string>macOSAccountFullName</string>
 				</dict>
-				<key>NewUserAuthenticationMethods</key>
-				<array>
-					<string>Password</string>
-				</array>
+				<key>UseSharedDeviceKeys</key>
+				<true/>
+				<key>UserAuthorizationMode</key>
+				<string>Admin</string>
 			</dict>
-			<key>RegistrationToken</key>
-			<string>{{DEVICEREGISTRATION}}</string>
 			<key>TeamIdentifier</key>
-			<string>UBF8T346G9</string>
+			<string>B7F62B65BN</string>
 			<key>Type</key>
 			<string>Redirect</string>
 			<key>URLs</key>
 			<array>
-				<string>https://login.microsoftonline.com</string>
-				<string>https://login.microsoft.com</string>
-				<string>https://sts.windows.net</string>
-				<string>https://login.partner.microsoftonline.cn</string>
-				<string>https://login.chinacloudapi.cn</string>
-				<string>https://login.microsoftonline.us</string>
-				<string>https://login-us.microsoftonline.com</string>
+				<string>https://trial-5957156.okta.com/device-access/api/v1/nonce</string>
+				<string>https://trial-5957156.okta.com/oauth2/v1/token</string>
 			</array>
 		</dict>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>com.okta.mobile</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>OktaVerify.LaunchOptions</key>
+								<string>HideMainWindow</string>
+								<key>OktaVerify.OrgUrl</key>
+								<string>trial-5957156.okta.com</string>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Custom Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>A55BE7C7-8E28-4453-9B6B-EB285AF415B1</string>
+			<key>PayloadOrganization</key>
+			<string>JAMF Software</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>A55BE7C7-8E28-4453-9B6B-EB285AF415B1</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>com.okta.mobile.auth-service-extension</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>OktaVerify.OrgUrl</key>
+								<string>trial-5957156.okta.com</string>
+								<key>OktaVerify.PasswordSyncClientID</key>
+								<string>0oaygjzu4zLrvwnIR697</string>
+								<key>PlatformSSO.ProtocolVersion</key>
+								<string>2.0</string>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Custom Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>26039503-D959-4240-BA21-ADAFCF252882</string>
+			<key>PayloadOrganization</key>
+			<string>JAMF Software</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>26039503-D959-4240-BA21-ADAFCF252882</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>com.apple.preference.security</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>dontAllowPasswordResetUI</key>
+								<true/>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadDisplayName</key>
+			<string>Custom Settings</string>
+			<key>PayloadIdentifier</key>
+			<string>31B38398-0CEE-475B-8B43-F3BCC8651294</string>
+			<key>PayloadOrganization</key>
+			<string>JAMF Software</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>31B38398-0CEE-475B-8B43-F3BCC8651294</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
 	</array>
+	<key>PayloadDescription</key>
+	<string>https://help.okta.com/oie/en-us/content/topics/identity-engine/devices/okta-ca-static-scep-macos-jamf.htm</string>
 	<key>PayloadDisplayName</key>
-	<string>Platform SSO - Password Sync</string>
+	<string>Security | Okta | Platform SSO | JSON</string>
+	<key>PayloadEnabled</key>
+	<true/>
 	<key>PayloadIdentifier</key>
-	<string>mdm.manageengine.com</string>
+	<string>B8E9A271-ABF1-48DA-9BEB-123456789</string>
+	<key>PayloadOrganization</key>
+	<string>ORG</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
 	<key>PayloadScope</key>
 	<string>System</string>
 	<key>PayloadType</key>
 	<string>Configuration</string>
 	<key>PayloadUUID</key>
-	<string>BFFE3ECD-24B4-478B-B5D1-B1CA16853848</string>
+	<string>B8E9A271-ABF1-48DA-9BEB-123456789</string>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
