@@ -4,7 +4,7 @@
   "description": "This is a Sample Server used to Platform SSO Device Onboarding Authentication",
   "main": "index.js",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "scripts": {
     "start": "node index.js",
