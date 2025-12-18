@@ -360,17 +360,17 @@ const companyportalmanifest = `<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//
                 <key>kind</key>
                 <string>software-package</string>
                 <key>url</key>
-                <string>https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/CompanyPortal-Installer.pkg</string>
+                <string>https://trial-5957156.okta.com/artifacts/OKTA_VERIFY_MACOS/9.54.1/OktaVerify-9.54.1-5838-ebd8af7.pkg</string>
             </dict>
         </array>
         <key>metadata</key>
         <dict>
             <key>bundle-identifier</key>
-            <string>com.microsoft.CompanyPortalMac</string>
+            <string>com.okta.mobile.</string>
             <key>kind</key>
             <string>software</string>
             <key>title</key>
-            <string>Microsoft Company Portal</string>
+            <string>Okta Verify Custom Package</string>
         </dict>
     </dict>
     </array>
