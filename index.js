@@ -60,41 +60,6 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>Configuration</key>
-			<array>
-				<dict>
-					<key>ApplicationIdentifier</key>
-					<string>B7F62B65BN.com.okta.mobile</string>
-					<key>AssociatedDomains</key>
-					<array>
-						<string>authsrv:trial-5957156.okta.com?mode=managed</string>
-					</array>
-					<key>EnableDirectDownloads</key>
-					<true/>
-				</dict>
-				<dict>
-					<key>ApplicationIdentifier</key>
-					<string>B7F62B65BN.com.okta.mobile.auth-service-extension</string>
-					<key>AssociatedDomains</key>
-					<array>
-						<string>authsrv:trial-5957156.okta.com?mode=managed</string>
-					</array>
-					<key>EnableDirectDownloads</key>
-					<true/>
-				</dict>
-			</array>
-			<key>PayloadDisplayName</key>
-			<string>Associated Domains #1</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.associated-domains.0AD77FAA-6D40-4C66-A7FE-C9A61871507F</string>
-			<key>PayloadType</key>
-			<string>com.apple.associated-domains</string>
-			<key>PayloadUUID</key>
-			<string>0AD77FAA-6D40-4C66-A7FE-C9A61871507F</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>AuthenticationMethod</key>
 			<string>Password</string>
 			<key>ExtensionIdentifier</key>
