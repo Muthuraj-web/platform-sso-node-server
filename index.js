@@ -279,18 +279,6 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
-		<dict>
-			<key>PayloadDisplayName</key>
-			<string>Extensible Single Sign-On(1)</string>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.extensiblesso.0237D7D5-38E4-447B-9165-A1EAFF37E147</string>
-			<key>PayloadType</key>
-			<string>com.apple.extensiblesso</string>
-			<key>PayloadUUID</key>
-			<string>0237D7D5-38E4-447B-9165-A1EAFF37E147</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>PayloadDescription</key>
 	<string>https://help.okta.com/oie/en-us/content/topics/identity-engine/devices/okta-ca-static-scep-macos-jamf.htm</string>
