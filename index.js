@@ -35,7 +35,7 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 					<array>
 						<array>
 							<string>CN</string>
-							<string>%devicename% managementAttestation %udid%</string>
+							<string>%ComputerName% managementAttestation %HardwareUUID%</string>
 						</array>
 					</array>
 				</array>
@@ -43,7 +43,7 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 				<string>https://trial-5957156.okta.com/pki/7D821A2E96C64F65BAB23F2C098629BA00D1B2E8/scep/rac23q9ipfbw5WThW698</string>
 			</dict>
 			<key>PayloadDescription</key>
-			<string>def</string>
+			<string></string>
 			<key>PayloadDisplayName</key>
 			<string>SCEP (CA-OKTAPreview)</string>
 			<key>PayloadEnabled</key>
@@ -56,6 +56,43 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<string>com.apple.security.scep</string>
 			<key>PayloadUUID</key>
 			<string>1234556</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>Configuration</key>
+			<array>
+				<dict>
+					<key>ApplicationIdentifier</key>
+					<string>B7F62B65BN.com.okta.mobile</string>
+					<key>AssociatedDomains</key>
+					<array>
+						<string>authsrv:trial-5957156.okta.com</string>
+					</array>
+				</dict>
+				<dict>
+					<key>ApplicationIdentifier</key>
+					<string>B7F62B65BN.com.okta.mobile.auth-service-extension</string>
+					<key>AssociatedDomains</key>
+					<array>
+						<string>authsrv:trial-5957156.okta.com</string>
+					</array>
+				</dict>
+			</array>
+			<key>PayloadDescription</key>
+			<string>Only for 10.15 MacOS</string>
+			<key>PayloadDisplayName</key>
+			<string>ASSOCIATED_DOMAINS</string>
+			<key>PayloadEnabled</key>
+			<true/>
+			<key>PayloadIdentifier</key>
+			<string>47A19A21-3CEC-401B-A7A2-6D82331E23DB</string>
+			<key>PayloadOrganization</key>
+			<string>State of California - Office of Digital Innovation</string>
+			<key>PayloadType</key>
+			<string>com.apple.associated-domains</string>
+			<key>PayloadUUID</key>
+			<string>47A19A21-3CEC-401B-A7A2-6D82331E23DB</string>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
@@ -80,21 +117,58 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<dict>
 				<key>AccountDisplayName</key>
 				<string>Okta Preview</string>
+				<key>AdministratorGroups</key>
+				<array>
+					<string>Admin Group</string>
+				</array>
 				<key>AllowDeviceIdentifiersInAttestation</key>
 				<true/>
 				<key>AuthenticationMethod</key>
 				<string>Password</string>
 				<key>EnableAuthorization</key>
 				<true/>
+				<key>EnableCreateFirstUserDuringSetup</key>
+				<true/>
+				<key>EnableCreateUserAtLogin</key>
+				<true/>
 				<key>EnableRegistrationDuringSetup</key>
 				<true/>
+				<key>FileVaultPolicy</key>
+				<array>
+					<string>AttemptAuthentication</string>
+				</array>
+				<key>LoginPolicy</key>
+				<array>
+					<string>AttemptAuthentication</string>
+				</array>
+				<key>NewUserAuthenticationMethods</key>
+				<array>
+					<string>Password</string>
+				</array>
 				<key>NewUserAuthorizationMode</key>
-				<string>Admin</string>
+				<string>Temporary</string>
+				<key>NonPlatformSSOAccounts</key>
+				<array>
+					<string>odiitadmin</string>
+				</array>
+				<key>TokenToUserMapping</key>
+				<dict>
+					<key>AccountName</key>
+					<string>macOSAccountUsername</string>
+					<key>FullName</key>
+					<string>macOSAccountFullName</string>
+				</dict>
+				<key>UnlockPolicy</key>
+				<array>
+					<string>AttemptAuthentication</string>
+				</array>
 				<key>UseSharedDeviceKeys</key>
 				<true/>
 				<key>UserAuthorizationMode</key>
-				<string>Admin</string>
+				<string>Standard</string>
 			</dict>
+			<key>RegistrationToken</key>
+			<string>any</string>
 			<key>TeamIdentifier</key>
 			<string>B7F62B65BN</string>
 			<key>Type</key>
@@ -104,8 +178,6 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 				<string>https://trial-5957156.okta.com/device-access/api/v1/nonce</string>
 				<string>https://trial-5957156.okta.com/oauth2/v1/token</string>
 			</array>
-			<key>RegistrationToken</key>
-			<string>any</string>
 		</dict>
 		<dict>
 			<key>PayloadContent</key>
@@ -121,8 +193,8 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 								<string>HideMainWindow</string>
 								<key>OktaVerify.OrgUrl</key>
 								<string>trial-5957156.okta.com</string>
-								<key>OktaVerify.EnrollmentOptions</key>
-            					<string>SilentEnrollmentEnabled</string>
+								<key>OktaVerify.UserPrincipalName</key>
+								<string>%HardwareUUID%</string>
 							</dict>
 						</dict>
 					</array>
@@ -155,10 +227,10 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 								<string>trial-5957156.okta.com</string>
 								<key>OktaVerify.PasswordSyncClientID</key>
 								<string>0oaygjzu4zLrvwnIR697</string>
+								<key>OktaVerify.UserPrincipalName</key>
+								<string>%HardwareUUID%</string>
 								<key>PlatformSSO.ProtocolVersion</key>
 								<string>2.0</string>
-								<key>OktaVerify.EnrollmentOptions</key>
-            					<string>SilentEnrollmentEnabled</string>
 							</dict>
 						</dict>
 					</array>
@@ -207,6 +279,18 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<key>PayloadVersion</key>
 			<integer>1</integer>
 		</dict>
+		<dict>
+			<key>PayloadDisplayName</key>
+			<string>Extensible Single Sign-On(1)</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.extensiblesso.0237D7D5-38E4-447B-9165-A1EAFF37E147</string>
+			<key>PayloadType</key>
+			<string>com.apple.extensiblesso</string>
+			<key>PayloadUUID</key>
+			<string>0237D7D5-38E4-447B-9165-A1EAFF37E147</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>PayloadDescription</key>
 	<string>https://help.okta.com/oie/en-us/content/topics/identity-engine/devices/okta-ca-static-scep-macos-jamf.htm</string>
@@ -229,7 +313,8 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 	<key>PayloadVersion</key>
 	<integer>1</integer>
 </dict>
-</plist>`;
+</plist>
+`;
 
 const platformssosecureenclaveprofile = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
