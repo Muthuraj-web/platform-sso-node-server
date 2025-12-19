@@ -60,43 +60,6 @@ const platformssopasscodeprofile = `<?xml version="1.0" encoding="UTF-8"?>
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>Configuration</key>
-			<array>
-				<dict>
-					<key>ApplicationIdentifier</key>
-					<string>B7F62B65BN.com.okta.mobile</string>
-					<key>AssociatedDomains</key>
-					<array>
-						<string>authsrv:trial-5957156.okta.com</string>
-					</array>
-				</dict>
-				<dict>
-					<key>ApplicationIdentifier</key>
-					<string>B7F62B65BN.com.okta.mobile.auth-service-extension</string>
-					<key>AssociatedDomains</key>
-					<array>
-						<string>authsrv:trial-5957156.okta.com</string>
-					</array>
-				</dict>
-			</array>
-			<key>PayloadDescription</key>
-			<string>Only for 10.15 MacOS</string>
-			<key>PayloadDisplayName</key>
-			<string>ASSOCIATED_DOMAINS</string>
-			<key>PayloadEnabled</key>
-			<true/>
-			<key>PayloadIdentifier</key>
-			<string>47A19A21-3CEC-401B-A7A2-6D82331E23DB</string>
-			<key>PayloadOrganization</key>
-			<string>State of California - Office of Digital Innovation</string>
-			<key>PayloadType</key>
-			<string>com.apple.associated-domains</string>
-			<key>PayloadUUID</key>
-			<string>47A19A21-3CEC-401B-A7A2-6D82331E23DB</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
 			<key>AuthenticationMethod</key>
 			<string>Password</string>
 			<key>ExtensionIdentifier</key>
